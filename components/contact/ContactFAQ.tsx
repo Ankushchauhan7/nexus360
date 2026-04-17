@@ -17,7 +17,7 @@ const faqs = [
     a: "Our free audit covers a review of your website performance, SEO health, social media presence, and paid advertising setup (if applicable). You receive a written summary with prioritised recommendations — at no cost and with no obligation.",
   },
   {
-    q: "Can I hire Nexu360 for just one service?",
+    q: "Can I hire Nexus360 for just one service?",
     a: "Absolutely. While we are structured as a total digital partner, many clients engage us for a single service area and expand over time. There is no minimum scope requirement.",
   },
   {

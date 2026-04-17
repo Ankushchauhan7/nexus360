@@ -58,8 +58,8 @@ export default function AboutStory() {
               body: "Most businesses work with a patchwork of agencies — one for SEO, another for social, a third for web development. The result is fragmented strategies, inconsistent messaging, and no single team accountable for the full picture.",
             },
             {
-              heading: "Why We Built Nexu360",
-              body: "We built Nexu360 to solve exactly that. By bringing every dimension of digital marketing under one roof — strategy, content, design, development, performance, and documentation — we eliminate silos and create a unified growth engine for every client we work with.",
+              heading: "Why We Built Nexus360",
+              body: "We built Nexus360 to solve exactly that. By bringing every dimension of digital marketing under one roof — strategy, content, design, development, performance, and documentation — we eliminate silos and create a unified growth engine for every client we work with.",
             },
             {
               heading: "How We Work",

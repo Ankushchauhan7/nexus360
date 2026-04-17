@@ -105,7 +105,7 @@ nexu360/
 │   │   ├── AboutStats.tsx          4-metric stats strip
 │   │   ├── AboutValues.tsx         6 core values grid
 │   │   ├── AboutTeam.tsx           Team cards + hiring CTA
-│   │   ├── AboutWhy.tsx            Nexu360 vs typical agencies table
+│   │   ├── AboutWhy.tsx            Nexus360 vs typical agencies table
 │   │   └── AboutCTA.tsx            About page bottom CTA
 │   │
 │   ├── contact/

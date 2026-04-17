@@ -8,13 +8,13 @@ import ContactFAQ      from "@/components/contact/ContactFAQ";
 import ContactServices from "@/components/contact/ContactServices";
 
 export const metadata: Metadata = {
-  title: "Contact Us — Nexu360",
+  title: "Contact Us — Nexus360",
   description:
-    "Get in touch with Nexu360. Start with a free digital audit, request a quote, or simply ask us anything about your digital growth needs.",
+    "Get in touch with Nexus360. Start with a free digital audit, request a quote, or simply ask us anything about your digital growth needs.",
   openGraph: {
-    title: "Contact Nexu360 — Let's Talk Digital Growth",
+    title: "Contact Nexus360 — Let's Talk Digital Growth",
     description:
-      "Reach out to Nexu360 for a free audit, a project quote, or a conversation about your digital strategy.",
+      "Reach out to Nexus360 for a free audit, a project quote, or a conversation about your digital strategy.",
   },
 };
 

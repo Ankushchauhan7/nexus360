@@ -51,7 +51,7 @@ export default function AboutWhy() {
           className="block text-[11px] tracking-[2.5px] mb-4"
           style={{ color: "var(--gold)" }}
         >
-          — THE NEXU360 DIFFERENCE
+          — THE NEXUS360 DIFFERENCE
         </motion.span>
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -101,7 +101,7 @@ export default function AboutWhy() {
           className="px-5 py-3 text-[11px] tracking-[2px]"
           style={{ backgroundColor: "rgba(232,160,32,0.08)", color: "var(--gold)" }}
         >
-          NEXU360 ✓
+          NEXUS360 ✓
         </div>
       </motion.div>
 

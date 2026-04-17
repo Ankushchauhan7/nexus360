@@ -14,7 +14,7 @@ const moreServices = [
 ];
 
 const companyLinks = [
-  "About Nexu360",
+  "About Nexus360",
   "Our Process",
   "Case Studies",
   "Blog",
@@ -140,7 +140,7 @@ export default function Footer() {
         style={{ borderColor: "var(--border2)" }}
       >
         <p className="text-[12px]" style={{ color: "var(--muted)" }}>
-          © 2025 Nexu360. All rights reserved.
+          © 2025 Nexus360. All rights reserved.
         </p>
         <div className="flex gap-3">
           {["in", "𝕏", "f", "▶"].map((icon) => (

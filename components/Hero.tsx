@@ -89,7 +89,7 @@ export default function Hero() {
           className="mt-8 text-[17px] leading-relaxed max-w-xl font-light"
           style={{ color: "var(--muted)" }}
         >
-          Nexu360 connects every dimension of your digital presence — from
+          Nexus360 connects every dimension of your digital presence — from
           search to social, design to documentation — into one seamless,
           high-performance growth engine.
         </motion.p>
@@ -128,7 +128,7 @@ export default function Hero() {
               color: "var(--text)",
             }}
           >
-            Why Nexu360
+            Why Nexus360
           </motion.a>
         </motion.div>
 

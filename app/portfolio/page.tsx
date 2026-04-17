@@ -7,9 +7,9 @@ import PortfolioStats   from "@/components/portfolio/PortfolioStats";
 import PortfolioCTA     from "@/components/portfolio/PortfolioCTA";
 
 export const metadata: Metadata = {
-  title: "Portfolio & Case Studies — Nexu360",
+  title: "Portfolio & Case Studies — Nexus360",
   description:
-    "Real results for real businesses. Explore Nexu360's case studies across web development, SEO, social media, performance marketing, content, design, and technical documentation.",
+    "Real results for real businesses. Explore Nexus360's case studies across web development, SEO, social media, performance marketing, content, design, and technical documentation.",
   openGraph: {
     title: "Nexu360 Portfolio — Proven Digital Growth Results",
     description:

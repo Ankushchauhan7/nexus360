@@ -53,7 +53,7 @@ export default function WhyUs() {
             className="block text-[11px] tracking-[2.5px] mb-4"
             style={{ color: "var(--gold)" }}
           >
-            — WHY NEXU360
+            — WHY NEXUS360
           </motion.span>
 
           <motion.h2
@@ -65,7 +65,7 @@ export default function WhyUs() {
           >
             THE{" "}
             <em className="font-serif not-italic" style={{ color: "var(--gold)" }}>
-              Nexu360
+              Nexus360
             </em>
             <br />
             ADVANTAGE

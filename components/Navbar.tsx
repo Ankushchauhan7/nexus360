@@ -41,7 +41,7 @@ export default function Navbar() {
     >
       {/* Logo */}
       <Link href="/" className="font-display text-3xl tracking-widest leading-none">
-        <span style={{ color: "var(--gold)" }}>NEXU</span>
+        <span style={{ color: "var(--gold)" }}>NEXUS</span>
         <span style={{ color: "var(--text)" }}>360</span>
       </Link>
 

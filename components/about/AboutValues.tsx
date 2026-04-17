@@ -74,7 +74,7 @@ export default function AboutValues() {
         >
           These are not corporate platitudes — they are the principles that
           guide every decision, every brief, and every client relationship at
-          Nexu360.
+          Nexus360.
         </motion.p>
       </div>
 

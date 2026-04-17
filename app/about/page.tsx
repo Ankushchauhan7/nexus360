@@ -10,13 +10,13 @@ import AboutWhy      from "@/components/about/AboutWhy";
 import AboutCTA      from "@/components/about/AboutCTA";
 
 export const metadata: Metadata = {
-  title: "About Us — Nexu360",
+  title: "About Us — Nexus360",
   description:
     "Nexu360 is a total digital growth partner — combining web development, SEO, social media, content, design, documentation, performance marketing, and AI solutions under one roof.",
   openGraph: {
-    title: "About Nexu360 — One Partner. Every Channel. Total Growth.",
+    title: "About Nexus360 — One Partner. Every Channel. Total Growth.",
     description:
-      "Learn who we are, what drives us, and why brands trust Nexu360 as their end-to-end digital partner.",
+      "Learn who we are, what drives us, and why brands trust Nexus360 as their end-to-end digital partner.",
   },
 };
 

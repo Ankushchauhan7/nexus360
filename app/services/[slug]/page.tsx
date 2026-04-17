@@ -27,10 +27,10 @@ export async function generateMetadata({
   if (!service) return { title: "Service Not Found" };
 
   return {
-    title: `${service.title} — Nexu360`,
+    title: `${service.title} — Nexus360`,
     description: service.heroDesc,
     openGraph: {
-      title: `${service.title} — Nexu360`,
+      title: `${service.title} — Nexus360`,
       description: service.tagline,
     },
   };

@@ -97,7 +97,7 @@ export default function AboutHero() {
             className="font-serif not-italic"
             style={{ color: "var(--gold)" }}
           >
-            Nexu360
+            Nexus360
           </em>
         </motion.h1>
 
@@ -121,7 +121,7 @@ export default function AboutHero() {
           transition={{ duration: 0.6, delay: 0.35 }}
           className="flex flex-wrap gap-3 mt-10"
         >
-          {["Our Story", "Our Values", "Our Team", "Why Nexu360"].map((label) => {
+          {["Our Story", "Our Values", "Our Team", "Why Nexus360"].map((label) => {
             const id = label.toLowerCase().replace(/\s+/g, "-").replace("our-", "");
             return (
               <a

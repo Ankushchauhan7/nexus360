@@ -23,7 +23,7 @@ export async function generateMetadata({
   const study    = getCaseStudyBySlug(slug);
   if (!study) return { title: "Case Study Not Found" };
   return {
-    title:       `${study.title} — Nexu360 Case Study`,
+    title:       `${study.title} — Nexus360 Case Study`,
     description: study.summary,
     openGraph: {
       title:       `${study.client}: ${study.title}`,
