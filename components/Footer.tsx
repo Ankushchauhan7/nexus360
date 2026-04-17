@@ -34,7 +34,7 @@ export default function Footer() {
         {/* Brand */}
         <div>
           <div className="font-display text-3xl tracking-widest mb-4">
-            <span style={{ color: "var(--gold)" }}>NEXU</span>
+            <span style={{ color: "var(--gold)" }}>NEXUS</span>
             <span style={{ color: "var(--text)" }}>360</span>
           </div>
           <p

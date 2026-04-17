@@ -67,7 +67,7 @@ export default function AboutCTA() {
           className="flex flex-col gap-4 min-w-[220px]"
         >
           <motion.a
-            href="mailto:hello@nexu360.com"
+            href="mailto:hello@nexus360.com"
             whileHover={{ scale: 1.03, y: -2 }}
             whileTap={{ scale: 0.97 }}
             className="block px-8 py-4 text-[13px] font-medium tracking-wide text-center transition-colors duration-200"

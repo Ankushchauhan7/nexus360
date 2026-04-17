@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description:
     "Real results for real businesses. Explore Nexus360's case studies across web development, SEO, social media, performance marketing, content, design, and technical documentation.",
   openGraph: {
-    title: "Nexu360 Portfolio — Proven Digital Growth Results",
+    title: "Nexus360 Portfolio — Proven Digital Growth Results",
     description:
       "Browse our case studies and see the measurable impact we deliver for clients across industries.",
   },

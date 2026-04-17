@@ -125,7 +125,7 @@ export default function ServiceSidebar({
 
         {/* CTA card */}
         <motion.a
-          href="mailto:hello@nexu360.com"
+          href="mailto:hello@nexus360.com"
           whileHover={{ scale: 1.02 } as never}
           whileTap={{ scale: 0.98 }}
           className="block p-6 text-center transition-colors duration-200"

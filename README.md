@@ -1,4 +1,4 @@
-# Nexu360 — Complete Website
+# Nexus360 — Complete Website
 
 **Total Digital Growth Partner** | Next.js 15 · Tailwind CSS · Motion.dev · TypeScript
 
@@ -11,7 +11,7 @@ Node.js v18 or higher — download from https://nodejs.org
 
 ### 1. Install dependencies
 ```bash
-cd nexu360
+cd nexus360
 npm install
 ```
 
@@ -73,7 +73,7 @@ Open **http://localhost:3000** in your browser.
 ## Project Structure
 
 ```
-nexu360/
+nexus360/
 ├── app/
 │   ├── layout.tsx                  Root layout — fonts, metadata
 │   ├── page.tsx                    Homepage

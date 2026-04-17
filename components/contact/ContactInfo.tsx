@@ -7,15 +7,15 @@ const contactDetails = [
   {
     icon: "✉",
     label: "Email Us",
-    value: "hello@nexu360.com",
-    href: "mailto:hello@nexu360.com",
+    value: "hello@nexus360.com",
+    href: "mailto:hello@nexus360.com",
     sub: "For general enquiries & project quotes",
   },
   {
     icon: "✉",
     label: "Careers",
-    value: "careers@nexu360.com",
-    href: "mailto:careers@nexu360.com",
+    value: "careers@nexus360.com",
+    href: "mailto:careers@nexus360.com",
     sub: "For job applications & partnerships",
   },
   {

@@ -106,7 +106,7 @@ export default function ContactForm() {
       );
       setSent(true);
     } catch {
-      setSendError("Something went wrong. Please email us directly at hello@nexu360.com");
+      setSendError("Something went wrong. Please email us directly at hello@nexus360.com");
     } finally {
       setSending(false);
     }
@@ -142,8 +142,8 @@ export default function ContactForm() {
         <p className="mt-3 text-[14px] leading-relaxed font-light max-w-lg" style={{ color: "var(--muted)" }}>
           Fill in the form below and we will get back to you within one business
           day. Prefer email? Reach us at{" "}
-          <a href="mailto:hello@nexu360.com" style={{ color: "var(--gold)" }}>
-            hello@nexu360.com
+          <a href="mailto:hello@nexus360.com" style={{ color: "var(--gold)" }}>
+            hello@nexus360.com
           </a>
         </p>
       </motion.div>

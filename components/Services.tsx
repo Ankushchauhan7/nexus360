@@ -35,7 +35,7 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
       />
 
       <Link href={`/services/${service.slug}`} className="block p-9 h-full transition-colors duration-300 group-hover:bg-[#141518]">
-        <div className="font-display text-[13px] tracking-[2px] mb-5 opacity-50" style={{ color: "var(--gold)" }}>
+        <div className="font-display text-[20px] tracking-[2px] mb-5 opacity-50" style={{ color: "var(--gold)" }}>
           {service.num}
         </div>
         <div className="text-3xl mb-4">{service.icon}</div>

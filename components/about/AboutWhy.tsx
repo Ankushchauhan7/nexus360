@@ -135,7 +135,7 @@ export default function AboutWhy() {
               {row.typical}
             </div>
 
-            {/* Nexu360 */}
+            {/* Nexus360 */}
             <div
               className="px-5 py-5 text-[13px] leading-relaxed font-light"
               style={{

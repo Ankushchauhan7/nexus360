@@ -25,7 +25,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Nexu360 — Total Digital Growth Partner",
+  title: "Nexus360 — Total Digital Growth Partner",
   description:
     "One partner for every dimension of your digital presence. Web development, SEO, social media, content, design, technical documentation, performance marketing, and AI-powered solutions.",
   keywords: [
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     "AI solutions",
   ],
   openGraph: {
-    title: "Nexu360 — Total Digital Growth Partner",
+    title: "Nexus360 — Total Digital Growth Partner",
     description: "One Partner. Every Channel. Total Growth.",
     type: "website",
   },
