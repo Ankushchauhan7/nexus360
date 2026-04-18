@@ -39,19 +39,36 @@ export const metadata: Metadata = {
     "AI solutions",
   ],
   metadataBase: new URL("https://nexus360degree.com"),
+
+  // ── Favicons ────────────────────────────────────────────────────────────────
   icons: {
+    // Browser tab icons (served in order — browser picks best fit)
     icon: [
-      { url: "/favicon.ico",          sizes: "48x48",  type: "image/x-icon" },
-      { url: "/favicon-32x32.png",    sizes: "32x32",  type: "image/png"    },
-      { url: "/favicon-16x16.png",    sizes: "16x16",  type: "image/png"    },
+      { url: "/favicon.ico",      sizes: "48x48",  type: "image/x-icon" },
+      { url: "/favicon-16.png",   sizes: "16x16",  type: "image/png"    },
+      { url: "/favicon-32.png",   sizes: "32x32",  type: "image/png"    },
+      { url: "/favicon-48.png",   sizes: "48x48",  type: "image/png"    },
+      { url: "/favicon-96.png",   sizes: "96x96",  type: "image/png"    },
+      { url: "/favicon-192.png",  sizes: "192x192", type: "image/png"   },
+      { url: "/favicon-512.png",  sizes: "512x512", type: "image/png"   },
     ],
-    apple:   [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
-    other:   [
-      { rel: "mask-icon", url: "/favicon.svg", color: "#00C8F0" },
+    // iPhone / iPad home screen icon
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
     ],
+    // Legacy fallback (IE, older browsers)
+    shortcut: "/favicon.ico",
   },
+
+  // ── Manifest & Theme ────────────────────────────────────────────────────────
   manifest: "/site.webmanifest",
-  themeColor: "#00C8F0",
+ themeColor: [
+  { media: "(prefers-color-scheme: dark)",  color: "#0D0E10" },
+  { media: "(prefers-color-scheme: light)", color: "#0D0E10" },
+],
+
+
+  // ── Open Graph (social sharing) ─────────────────────────────────────────────
   openGraph: {
     title:       "Nexus360° — One Partner. Every Channel. Total Growth.",
     description: "Total connection across every digital touchpoint.",
@@ -59,14 +76,17 @@ export const metadata: Metadata = {
     siteName:    "Nexus360°",
     images: [
       {
-        url:    "/og-image.png",   // add a 1200×630 OG image later
+        url:    "/og-image.png",
         width:  1200,
         height: 630,
         alt:    "Nexus360° — Digital Growth Partner",
       },
     ],
     type: "website",
+    locale: "en_IN",
   },
+
+  // ── Twitter / X Card ────────────────────────────────────────────────────────
   twitter: {
     card:        "summary_large_image",
     title:       "Nexus360° — One Partner. Every Channel. Total Growth.",

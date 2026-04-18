@@ -4,8 +4,8 @@
   "description": "One Partner. Every Channel. Total Growth.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#05080F",
-  "theme_color": "#00C8F0",
+  "background_color": "#0D0E10",
+  "theme_color": "#0D0E10",
   "icons": [
     {
       "src": "/icon-192x192.png",
