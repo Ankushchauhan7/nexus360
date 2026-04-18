@@ -162,10 +162,10 @@ export default function ContactForm() {
           Fill in the form below and we will get back to you within one business
           day. Prefer email? Reach us at{" "}
           <a
-            href="mailto:hello@nexus360degree.com"
+            href="mailto:support@nexus360degree.com"
             style={{ color: "var(--gold)" }}
           >
-            hello@nexus360degree.com
+            support@nexus360degree.com
           </a>
         </p>
       </motion.div>
