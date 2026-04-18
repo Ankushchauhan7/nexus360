@@ -137,7 +137,7 @@ export default function ContactFAQ() {
           >
             Can&apos;t find your answer here?{" "}
             <a
-              href="mailto:hello@nexus360.com"
+              href="mailto:support@nexus360degree.com"
               className="transition-colors duration-200"
               style={{ color: "var(--gold)" }}
             >

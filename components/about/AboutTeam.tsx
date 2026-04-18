@@ -197,7 +197,7 @@ export default function AboutTeam() {
           </p>
         </div>
         <motion.a
-          href="mailto:careers@nexus360.com"
+          href="mailto:support@nexus360degree.com"
           whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.97 }}
           className="flex-shrink-0 px-7 py-3 text-[13px] font-medium tracking-wide border transition-colors duration-200"

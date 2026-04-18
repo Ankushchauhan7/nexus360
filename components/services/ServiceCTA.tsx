@@ -46,7 +46,7 @@ export default function ServiceCTA({ service }: { service: Service }) {
         className="flex flex-wrap items-center justify-center gap-4"
       >
         <motion.a
-          href="mailto:hello@nexus360.com"
+          href="mailto:support@nexus360degree.com"
           whileHover={{ backgroundColor: "#1a1c20" } as never}
           whileTap={{ scale: 0.97 }}
           className="inline-block px-10 py-4 text-sm font-medium tracking-wide transition-colors duration-200"

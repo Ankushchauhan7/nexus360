@@ -38,7 +38,7 @@ export default function CtaBanner() {
       </motion.p>
 
       <motion.a
-        href="mailto:hello@nexus360.com"
+        href="mailto:support@nexus360degree.com"
         initial={{ opacity: 0, y: 20 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.7, delay: 0.25 }}

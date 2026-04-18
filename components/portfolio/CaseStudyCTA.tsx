@@ -43,7 +43,7 @@ export default function CaseStudyCTA({ study }: { study: CaseStudy }) {
         className="flex flex-wrap gap-4 justify-center"
       >
         <motion.a
-          href="mailto:hello@nexus360.com"
+          href="mailto:support@nexus360degree.com"
           whileHover={{ backgroundColor: "#1a1c20" } as never}
           whileTap={{ scale: 0.97 }}
           className="inline-block px-10 py-4 text-sm font-medium tracking-wide transition-colors duration-200"

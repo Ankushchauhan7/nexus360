@@ -5,26 +5,26 @@ import { useForm } from "react-hook-form";
 import { motion, useInView, AnimatePresence } from "motion/react";
 import emailjs from "@emailjs/browser";
 
-const EMAILJS_SERVICE_ID  = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
+const EMAILJS_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
 const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!;
-const EMAILJS_PUBLIC_KEY  = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!;
+const EMAILJS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!;
 
 type FormData = {
   enquiryType: string;
-  name:        string;
-  email:       string;
-  company:     string;
-  phone:       string;
-  services:    string[];
-  budget:      string;
-  message:     string;
+  name: string;
+  email: string;
+  company: string;
+  phone: string;
+  services: string[];
+  budget: string;
+  message: string;
 };
 
 const enquiryTypes = [
-  { value: "audit",   label: "Free Digital Audit"   },
-  { value: "quote",   label: "Project Quote"         },
-  { value: "general", label: "General Enquiry"       },
-  { value: "partner", label: "Partnership / Referral"},
+  { value: "audit", label: "Free Digital Audit" },
+  { value: "quote", label: "Project Quote" },
+  { value: "general", label: "General Enquiry" },
+  { value: "partner", label: "Partnership / Referral" },
 ];
 
 const serviceOptions = [
@@ -50,12 +50,12 @@ const budgetRanges = [
 
 export default function ContactForm() {
   const sectionRef = useRef(null);
-  const formRef    = useRef<HTMLFormElement>(null);
-  const inView     = useInView(sectionRef, { once: true, margin: "-60px" });
+  const formRef = useRef<HTMLFormElement>(null);
+  const inView = useInView(sectionRef, { once: true, margin: "-60px" });
 
-  const [sending,  setSending]  = useState(false);
-  const [sent,     setSent]     = useState(false);
-  const [sendError,setSendError]= useState("");
+  const [sending, setSending] = useState(false);
+  const [sent, setSent] = useState(false);
+  const [sendError, setSendError] = useState("");
 
   const {
     register,
@@ -67,13 +67,16 @@ export default function ContactForm() {
     defaultValues: { enquiryType: "audit", services: [] },
   });
 
-  const watchedServices  = watch("services") ?? [];
-  const watchedEnquiry   = watch("enquiryType");
+  const watchedServices = watch("services") ?? [];
+  const watchedEnquiry = watch("enquiryType");
 
   const toggleService = (service: string) => {
     const current = watchedServices;
     if (current.includes(service)) {
-      setValue("services", current.filter((s) => s !== service));
+      setValue(
+        "services",
+        current.filter((s) => s !== service),
+      );
     } else {
       setValue("services", [...current, service]);
     }
@@ -87,20 +90,22 @@ export default function ContactForm() {
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
         {
-          from_name:    data.name,
-          from_email:   data.email,
-          company:      data.company   || "—",
-          phone:        data.phone     || "—",
+          from_name: data.name,
+          from_email: data.email,
+          company: data.company || "—",
+          phone: data.phone || "—",
           enquiry_type: data.enquiryType,
-          services:     data.services.join(", ") || "—",
-          budget:       data.budget    || "—",
-          message:      data.message,
+          services: data.services.join(", ") || "—",
+          budget: data.budget || "—",
+          message: data.message,
         },
-        EMAILJS_PUBLIC_KEY
+        EMAILJS_PUBLIC_KEY,
       );
       setSent(true);
     } catch {
-      setSendError("Something went wrong. Please email us directly at hello@nexus360.com");
+      setSendError(
+        "Something went wrong. Please email us directly at support@nexus360degree.com",
+      );
     } finally {
       setSending(false);
     }
@@ -113,10 +118,16 @@ export default function ContactForm() {
     borderColor: "var(--border2)",
     color: "var(--text)",
   };
-  const inputFocus = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
-    (e.currentTarget.style.borderColor = "var(--gold)");
-  const inputBlur  = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
-    (e.currentTarget.style.borderColor = "var(--border2)");
+  const inputFocus = (
+    e: React.FocusEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
+  ) => (e.currentTarget.style.borderColor = "var(--gold)");
+  const inputBlur = (
+    e: React.FocusEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
+  ) => (e.currentTarget.style.borderColor = "var(--border2)");
 
   return (
     <div ref={sectionRef} id="audit">
@@ -126,18 +137,35 @@ export default function ContactForm() {
         transition={{ duration: 0.6 }}
         className="mb-10"
       >
-        <span className="block text-[11px] tracking-[2.5px] mb-3" style={{ color: "var(--gold)" }}>
+        <span
+          className="block text-[11px] tracking-[2.5px] mb-3"
+          style={{ color: "var(--gold)" }}
+        >
           — SEND US A MESSAGE
         </span>
-        <h2 className="font-display leading-none tracking-wide" style={{ fontSize: "clamp(32px, 4vw, 52px)" }}>
+        <h2
+          className="font-display leading-none tracking-wide"
+          style={{ fontSize: "clamp(32px, 4vw, 52px)" }}
+        >
           START THE{" "}
-          <em className="font-serif not-italic" style={{ color: "var(--gold)" }}>Conversation</em>
+          <em
+            className="font-serif not-italic"
+            style={{ color: "var(--gold)" }}
+          >
+            Conversation
+          </em>
         </h2>
-        <p className="mt-3 text-[14px] leading-relaxed font-light max-w-lg" style={{ color: "var(--muted)" }}>
+        <p
+          className="mt-3 text-[14px] leading-relaxed font-light max-w-lg"
+          style={{ color: "var(--muted)" }}
+        >
           Fill in the form below and we will get back to you within one business
           day. Prefer email? Reach us at{" "}
-          <a href="mailto:hello@nexus360.com" style={{ color: "var(--gold)" }}>
-            hello@nexus360.com
+          <a
+            href="mailto:hello@nexus360degree.com"
+            style={{ color: "var(--gold)" }}
+          >
+            hello@nexus360degree.com
           </a>
         </p>
       </motion.div>
@@ -150,15 +178,24 @@ export default function ContactForm() {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0 }}
             className="p-10 text-center border"
-            style={{ borderColor: "var(--gold)", backgroundColor: "rgba(232,160,32,0.06)" }}
+            style={{
+              borderColor: "var(--gold)",
+              backgroundColor: "rgba(232,160,32,0.06)",
+            }}
           >
             <div className="text-4xl mb-4">✓</div>
-            <h3 className="font-display text-3xl tracking-wide mb-3" style={{ color: "var(--gold)" }}>
+            <h3
+              className="font-display text-3xl tracking-wide mb-3"
+              style={{ color: "var(--gold)" }}
+            >
               MESSAGE SENT!
             </h3>
-            <p className="text-[14px] font-light" style={{ color: "var(--muted)" }}>
-              Thank you for reaching out. We will review your message and respond
-              within one business day.
+            <p
+              className="text-[14px] font-light"
+              style={{ color: "var(--muted)" }}
+            >
+              Thank you for reaching out. We will review your message and
+              respond within one business day.
             </p>
           </motion.div>
         )}
@@ -177,10 +214,16 @@ export default function ContactForm() {
         >
           {/* Enquiry type */}
           <div>
-            <label className="block text-[11px] tracking-[1.5px] mb-3" style={{ color: "var(--muted)" }}>
+            <label
+              className="block text-[11px] tracking-[1.5px] mb-3"
+              style={{ color: "var(--muted)" }}
+            >
               ENQUIRY TYPE
             </label>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-px" style={{ backgroundColor: "var(--border2)" }}>
+            <div
+              className="grid grid-cols-2 sm:grid-cols-4 gap-px"
+              style={{ backgroundColor: "var(--border2)" }}
+            >
               {enquiryTypes.map((type) => {
                 const active = watchedEnquiry === type.value;
                 return (
@@ -190,8 +233,8 @@ export default function ContactForm() {
                     onClick={() => setValue("enquiryType", type.value)}
                     className="py-3 px-4 text-[12px] tracking-wide transition-colors duration-200"
                     style={{
-                      backgroundColor: active ? "var(--gold)"  : "var(--bg)",
-                      color:           active ? "#0d0e10"       : "var(--muted)",
+                      backgroundColor: active ? "var(--gold)" : "var(--bg)",
+                      color: active ? "#0d0e10" : "var(--muted)",
                     }}
                   >
                     {type.label}
@@ -204,7 +247,10 @@ export default function ContactForm() {
           {/* Name + Email */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label className="block text-[11px] tracking-[1.5px] mb-2" style={{ color: "var(--muted)" }}>
+              <label
+                className="block text-[11px] tracking-[1.5px] mb-2"
+                style={{ color: "var(--muted)" }}
+              >
                 FULL NAME <span style={{ color: "var(--gold)" }}>*</span>
               </label>
               <input
@@ -216,17 +262,25 @@ export default function ContactForm() {
                 onBlur={inputBlur}
               />
               {errors.name && (
-                <p className="mt-1 text-[12px]" style={{ color: "#e05050" }}>{errors.name.message}</p>
+                <p className="mt-1 text-[12px]" style={{ color: "#e05050" }}>
+                  {errors.name.message}
+                </p>
               )}
             </div>
             <div>
-              <label className="block text-[11px] tracking-[1.5px] mb-2" style={{ color: "var(--muted)" }}>
+              <label
+                className="block text-[11px] tracking-[1.5px] mb-2"
+                style={{ color: "var(--muted)" }}
+              >
                 EMAIL ADDRESS <span style={{ color: "var(--gold)" }}>*</span>
               </label>
               <input
                 {...register("email", {
                   required: "Email is required",
-                  pattern: { value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, message: "Enter a valid email" },
+                  pattern: {
+                    value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                    message: "Enter a valid email",
+                  },
                 })}
                 type="email"
                 placeholder="you@company.com"
@@ -236,7 +290,9 @@ export default function ContactForm() {
                 onBlur={inputBlur}
               />
               {errors.email && (
-                <p className="mt-1 text-[12px]" style={{ color: "#e05050" }}>{errors.email.message}</p>
+                <p className="mt-1 text-[12px]" style={{ color: "#e05050" }}>
+                  {errors.email.message}
+                </p>
               )}
             </div>
           </div>
@@ -244,7 +300,10 @@ export default function ContactForm() {
           {/* Company + Phone */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label className="block text-[11px] tracking-[1.5px] mb-2" style={{ color: "var(--muted)" }}>
+              <label
+                className="block text-[11px] tracking-[1.5px] mb-2"
+                style={{ color: "var(--muted)" }}
+              >
                 COMPANY / ORGANISATION
               </label>
               <input
@@ -257,7 +316,10 @@ export default function ContactForm() {
               />
             </div>
             <div>
-              <label className="block text-[11px] tracking-[1.5px] mb-2" style={{ color: "var(--muted)" }}>
+              <label
+                className="block text-[11px] tracking-[1.5px] mb-2"
+                style={{ color: "var(--muted)" }}
+              >
                 PHONE NUMBER
               </label>
               <input
@@ -273,8 +335,12 @@ export default function ContactForm() {
 
           {/* Services interested in */}
           <div>
-            <label className="block text-[11px] tracking-[1.5px] mb-3" style={{ color: "var(--muted)" }}>
-              SERVICES YOU&apos;RE INTERESTED IN <span className="opacity-50">(select all that apply)</span>
+            <label
+              className="block text-[11px] tracking-[1.5px] mb-3"
+              style={{ color: "var(--muted)" }}
+            >
+              SERVICES YOU&apos;RE INTERESTED IN{" "}
+              <span className="opacity-50">(select all that apply)</span>
             </label>
             <div className="flex flex-wrap gap-2">
               {serviceOptions.map((service) => {
@@ -286,12 +352,15 @@ export default function ContactForm() {
                     onClick={() => toggleService(service)}
                     className="px-4 py-2 text-[12px] tracking-wide border transition-all duration-200"
                     style={{
-                      borderColor:     selected ? "var(--gold)"  : "var(--border2)",
-                      backgroundColor: selected ? "rgba(232,160,32,0.10)" : "transparent",
-                      color:           selected ? "var(--gold)"  : "var(--muted)",
+                      borderColor: selected ? "var(--gold)" : "var(--border2)",
+                      backgroundColor: selected
+                        ? "rgba(232,160,32,0.10)"
+                        : "transparent",
+                      color: selected ? "var(--gold)" : "var(--muted)",
                     }}
                   >
-                    {selected ? "✓ " : ""}{service}
+                    {selected ? "✓ " : ""}
+                    {service}
                   </button>
                 );
               })}
@@ -300,7 +369,10 @@ export default function ContactForm() {
 
           {/* Budget */}
           <div>
-            <label className="block text-[11px] tracking-[1.5px] mb-2" style={{ color: "var(--muted)" }}>
+            <label
+              className="block text-[11px] tracking-[1.5px] mb-2"
+              style={{ color: "var(--muted)" }}
+            >
               MONTHLY BUDGET RANGE
             </label>
             <select
@@ -310,20 +382,33 @@ export default function ContactForm() {
               onFocus={inputFocus}
               onBlur={inputBlur}
             >
-              <option value="" style={{ backgroundColor: "#141518" }}>Select a range...</option>
+              <option value="" style={{ backgroundColor: "#141518" }}>
+                Select a range...
+              </option>
               {budgetRanges.map((b) => (
-                <option key={b} value={b} style={{ backgroundColor: "#141518" }}>{b}</option>
+                <option
+                  key={b}
+                  value={b}
+                  style={{ backgroundColor: "#141518" }}
+                >
+                  {b}
+                </option>
               ))}
             </select>
           </div>
 
           {/* Message */}
           <div>
-            <label className="block text-[11px] tracking-[1.5px] mb-2" style={{ color: "var(--muted)" }}>
+            <label
+              className="block text-[11px] tracking-[1.5px] mb-2"
+              style={{ color: "var(--muted)" }}
+            >
               YOUR MESSAGE <span style={{ color: "var(--gold)" }}>*</span>
             </label>
             <textarea
-              {...register("message", { required: "Please tell us about your project" })}
+              {...register("message", {
+                required: "Please tell us about your project",
+              })}
               rows={6}
               placeholder="Tell us about your business, your goals, and what you're looking to achieve..."
               className={inputClass}
@@ -332,13 +417,18 @@ export default function ContactForm() {
               onBlur={inputBlur}
             />
             {errors.message && (
-              <p className="mt-1 text-[12px]" style={{ color: "#e05050" }}>{errors.message.message}</p>
+              <p className="mt-1 text-[12px]" style={{ color: "#e05050" }}>
+                {errors.message.message}
+              </p>
             )}
           </div>
 
           {/* Error banner */}
           {sendError && (
-            <p className="text-[13px] p-4 border" style={{ color: "#e05050", borderColor: "#e05050" }}>
+            <p
+              className="text-[13px] p-4 border"
+              style={{ color: "#e05050", borderColor: "#e05050" }}
+            >
               {sendError}
             </p>
           )}
@@ -351,13 +441,21 @@ export default function ContactForm() {
             whileTap={!sending ? { scale: 0.98 } : {}}
             className="w-full py-4 text-[14px] font-medium tracking-wide transition-colors duration-200 disabled:opacity-60"
             style={{ backgroundColor: "var(--gold)", color: "#0d0e10" }}
-            onMouseEnter={(e) => { if (!sending) e.currentTarget.style.backgroundColor = "var(--gold2)"; }}
-            onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = "var(--gold)"; }}
+            onMouseEnter={(e) => {
+              if (!sending)
+                e.currentTarget.style.backgroundColor = "var(--gold2)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = "var(--gold)";
+            }}
           >
             {sending ? "Sending..." : "Send Message →"}
           </motion.button>
 
-          <p className="text-[12px] text-center" style={{ color: "var(--muted)" }}>
+          <p
+            className="text-[12px] text-center"
+            style={{ color: "var(--muted)" }}
+          >
             We respond within 1 business day. Your details are never shared.
           </p>
         </motion.form>

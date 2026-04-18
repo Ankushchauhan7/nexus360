@@ -39,7 +39,7 @@ Message:
 {{message}}
 ```
 
-3. Set **To Email** to: `hello@nexus360.com`
+3. Set **To Email** to: `support@nexus360degree.com`
 4. Set **Subject** to: `New Enquiry from {{from_name}} — Nexus360`
 5. Save and copy your **Template ID** (looks like: `template_xxxxxxx`)
 
@@ -75,7 +75,7 @@ const EMAILJS_PUBLIC_KEY  = "your_public_key_here";
 ## Step 6 — Test It
 
 Run `npm run dev`, go to `/contact`, fill in the form and submit.
-You should receive the email at `hello@nexus360.com` within seconds.
+You should receive the email at `support@nexus360degree.com` within seconds.
 
 ---
 
