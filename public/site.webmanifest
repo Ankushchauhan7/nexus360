@@ -1,0 +1,23 @@
+{
+  "name": "Nexus360°",
+  "short_name": "Nexus360",
+  "description": "One Partner. Every Channel. Total Growth.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#05080F",
+  "theme_color": "#00C8F0",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
