@@ -5,15 +5,9 @@ import { useForm } from "react-hook-form";
 import { motion, useInView, AnimatePresence } from "motion/react";
 import emailjs from "@emailjs/browser";
 
-/* ─── EmailJS config ───────────────────────────────────────────────────────
-   Replace these three values with your own from https://emailjs.com
-   Service ID  → Your EmailJS Service (e.g. Gmail, Outlook)
-   Template ID → Your EmailJS email template
-   Public Key  → Account > API Keys > Public Key
-──────────────────────────────────────────────────────────────────────────── */
-const EMAILJS_SERVICE_ID  = "YOUR_SERVICE_ID";
-const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
-const EMAILJS_PUBLIC_KEY  = "YOUR_PUBLIC_KEY";
+const EMAILJS_SERVICE_ID  = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
+const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!;
+const EMAILJS_PUBLIC_KEY  = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!;
 
 type FormData = {
   enquiryType: string;

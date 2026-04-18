@@ -22,7 +22,7 @@ export default function Navbar() {
     { label: "About",      href: "/about"                                 },
     { label: "Why Us",     href: isHome ? "#why"         : "/#why"        },
     { label: "Process",    href: isHome ? "#process"     : "/#process"    },
-    { label: "Contact",    href: isHome ? "/contact"     : "/#contact"    },
+    { label: "Contact",    href:  "/contact"    },
   ];
 
   return (
@@ -71,7 +71,7 @@ export default function Navbar() {
 
       {/* CTA */}
       <motion.a
-        href={isHome ? "#contact" : "/#contact"}
+        href={"/contact"}
         whileHover={{ scale: 1.03 }}
         whileTap={{ scale: 0.97 }}
         className="hidden md:inline-block text-[13px] font-medium tracking-wide px-5 py-2.5 transition-colors duration-200"
@@ -124,7 +124,7 @@ export default function Navbar() {
             </Link>
           ))}
           <Link
-            href={isHome ? "#contact" : "/#contact"}
+            href={"/contact"}
             onClick={() => setMenuOpen(false)}
             className="px-8 py-4 text-sm font-medium"
             style={{ backgroundColor: "var(--gold)", color: "#0d0e10" }}
