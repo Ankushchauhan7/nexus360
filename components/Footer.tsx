@@ -1,4 +1,5 @@
 "use client";
+
 const serviceLinks = [
   "Web Development",
   "SEO",
@@ -14,11 +15,11 @@ const moreServices = [
 ];
 
 const companyLinks = [
-  "About Nexus360",
-  "Our Process",
-  "Case Studies",
-  "Blog",
-  "Contact",
+  { label: "About Nexus360", href: "/about" },
+  { label: "Our Process", href: "/#process" },
+  // { label: "Case Studies", href: "/case-studies" },
+  // { label: "Blog", href: "/blog" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Footer() {
@@ -31,6 +32,7 @@ export default function Footer() {
       }}
     >
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        
         {/* Brand */}
         <div>
           <div className="font-display text-3xl tracking-widest mb-4">
@@ -58,7 +60,7 @@ export default function Footer() {
             {serviceLinks.map((s) => (
               <li key={s}>
                 <a
-                  href="#services"
+                  href="/#services"
                   className="text-[13px] transition-colors duration-200"
                   style={{ color: "var(--muted)" }}
                   onMouseEnter={(e) =>
@@ -87,7 +89,7 @@ export default function Footer() {
             {moreServices.map((s) => (
               <li key={s}>
                 <a
-                  href="#services"
+                  href="/#services"
                   className="text-[13px] transition-colors duration-200"
                   style={{ color: "var(--muted)" }}
                   onMouseEnter={(e) =>
@@ -113,10 +115,10 @@ export default function Footer() {
             COMPANY
           </h4>
           <ul className="space-y-2.5">
-            {companyLinks.map((s) => (
-              <li key={s}>
+            {companyLinks.map((item) => (
+              <li key={item.label}>
                 <a
-                  href="#"
+                  href={item.href}
                   className="text-[13px] transition-colors duration-200"
                   style={{ color: "var(--muted)" }}
                   onMouseEnter={(e) =>
@@ -126,7 +128,7 @@ export default function Footer() {
                     (e.currentTarget.style.color = "var(--muted)")
                   }
                 >
-                  {s}
+                  {item.label}
                 </a>
               </li>
             ))}
@@ -142,6 +144,8 @@ export default function Footer() {
         <p className="text-[12px]" style={{ color: "var(--muted)" }}>
           © 2025 Nexus360. All rights reserved.
         </p>
+
+        {/* Social icons */}
         <div className="flex gap-3">
           {["in", "𝕏", "f", "▶"].map((icon) => (
             <button

@@ -6,10 +6,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export default function Navbar() {
-  const [scrolled, setScrolled]   = useState(false);
-  const [menuOpen, setMenuOpen]   = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
-  const isHome = pathname === "/";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -17,12 +16,13 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // ✅ Clean links (no isHome logic)
   const links = [
-    { label: "Services",   href: isHome ? "#services"   : "/#services"   },
-    { label: "About",      href: "/about"                                 },
-    { label: "Why Us",     href: isHome ? "#why"         : "/#why"        },
-    { label: "Process",    href: isHome ? "#process"     : "/#process"    },
-    { label: "Contact",    href:  "/contact"    },
+    { label: "Services", href: "/#services" },
+    { label: "About", href: "/about" },
+    { label: "Why Us", href: "/#why" },
+    { label: "Process", href: "/#process" },
+    { label: "Contact", href: "/contact" },
   ];
 
   return (
@@ -48,22 +48,52 @@ export default function Navbar() {
       {/* Desktop links */}
       <ul className="hidden md:flex gap-8">
         {links.map((link) => {
-          const isActive = pathname === link.href;
+          const isActive =
+            pathname === link.href ||
+            (link.href === "/about" && pathname.startsWith("/about")) ||
+            (link.href === "/contact" && pathname.startsWith("/contact"));
+
           return (
             <li key={link.href}>
-              <Link
-                href={link.href}
-                className="text-[13px] tracking-wide transition-colors duration-200"
-                style={{ color: isActive ? "var(--gold)" : "var(--muted)" }}
-                onMouseEnter={(e) =>
-                  (e.currentTarget.style.color = "var(--gold)")
-                }
-                onMouseLeave={(e) =>
-                  (e.currentTarget.style.color = isActive ? "var(--gold)" : "var(--muted)")
-                }
-              >
-                {link.label}
-              </Link>
+              {link.href.includes("#") ? (
+                // ✅ Use <a> for hash navigation
+                <a
+                  href={link.href}
+                  className="text-[13px] tracking-wide transition-colors duration-200"
+                  style={{
+                    color: isActive ? "var(--gold)" : "var(--muted)",
+                  }}
+                  onMouseEnter={(e) =>
+                    (e.currentTarget.style.color = "var(--gold)")
+                  }
+                  onMouseLeave={(e) =>
+                    (e.currentTarget.style.color = isActive
+                      ? "var(--gold)"
+                      : "var(--muted)")
+                  }
+                >
+                  {link.label}
+                </a>
+              ) : (
+                // ✅ Use Link for normal routes
+                <Link
+                  href={link.href}
+                  className="text-[13px] tracking-wide transition-colors duration-200"
+                  style={{
+                    color: isActive ? "var(--gold)" : "var(--muted)",
+                  }}
+                  onMouseEnter={(e) =>
+                    (e.currentTarget.style.color = "var(--gold)")
+                  }
+                  onMouseLeave={(e) =>
+                    (e.currentTarget.style.color = isActive
+                      ? "var(--gold)"
+                      : "var(--muted)")
+                  }
+                >
+                  {link.label}
+                </Link>
+              )}
             </li>
           );
         })}
@@ -71,7 +101,7 @@ export default function Navbar() {
 
       {/* CTA */}
       <motion.a
-        href={"/contact"}
+        href="/contact"
         whileHover={{ scale: 1.03 }}
         whileTap={{ scale: 0.97 }}
         className="hidden md:inline-block text-[13px] font-medium tracking-wide px-5 py-2.5 transition-colors duration-200"
@@ -112,19 +142,38 @@ export default function Navbar() {
             borderColor: "var(--border2)",
           }}
         >
-          {links.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={() => setMenuOpen(false)}
-              className="px-8 py-4 text-sm border-b"
-              style={{ color: "var(--muted)", borderColor: "var(--border2)" }}
-            >
-              {link.label}
-            </Link>
-          ))}
+          {links.map((link) =>
+            link.href.includes("#") ? (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={() => setMenuOpen(false)}
+                className="px-8 py-4 text-sm border-b"
+                style={{
+                  color: "var(--muted)",
+                  borderColor: "var(--border2)",
+                }}
+              >
+                {link.label}
+              </a>
+            ) : (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setMenuOpen(false)}
+                className="px-8 py-4 text-sm border-b"
+                style={{
+                  color: "var(--muted)",
+                  borderColor: "var(--border2)",
+                }}
+              >
+                {link.label}
+              </Link>
+            )
+          )}
+
           <Link
-            href={"/contact"}
+            href="/contact"
             onClick={() => setMenuOpen(false)}
             className="px-8 py-4 text-sm font-medium"
             style={{ backgroundColor: "var(--gold)", color: "#0d0e10" }}
