@@ -20,10 +20,17 @@ const contactDetails = [
   },
   {
     icon: "☎",
-    label: "Call Us",
+    label: "Call Us — Pan India",
     value: "+91 9870115970",
     href: "tel:+919870115970",
     sub: "Mon–Fri, 9 AM – 6 PM IST",
+  },
+  {
+    icon: "☎",
+    label: "Call Us — South India",
+    value: "+91 7736077740",
+    href: "tel:+917736077740",
+    sub: "Kerala · Tamil Nadu · Karnataka · Andhra · Telangana",
   },
   {
     icon: "◎",
@@ -100,7 +107,7 @@ export default function ContactInfo() {
               CONTACT DETAILS
             </span>
           </div>
-          {contactDetails.map((item, i) => (
+          {contactDetails.map((item) => (
             <a
               key={item.label}
               href={item.href}
