@@ -79,7 +79,7 @@ export default function AboutCTA() {
               (e.currentTarget.style.backgroundColor = "var(--gold)")
             }
           >
-            Get a Free Audit →
+            Get a Free digital Audit →
           </motion.a>
 
           <Link

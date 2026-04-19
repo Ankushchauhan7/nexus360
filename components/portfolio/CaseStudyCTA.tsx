@@ -49,7 +49,7 @@ export default function CaseStudyCTA({ study }: { study: CaseStudy }) {
           className="inline-block px-10 py-4 text-sm font-medium tracking-wide transition-colors duration-200"
           style={{ backgroundColor: "#0d0e10", color: "var(--gold)" }}
         >
-          Get a Free Audit →
+          Get a Free Digital Audit →
         </motion.a>
         <Link
           href="/portfolio"

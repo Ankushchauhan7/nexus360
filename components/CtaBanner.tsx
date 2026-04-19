@@ -38,7 +38,7 @@ export default function CtaBanner() {
       </motion.p>
 
       <motion.a
-        href="mailto:support@nexus360degree.com"
+        href="/digital-auditing"
         initial={{ opacity: 0, y: 20 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.7, delay: 0.25 }}
@@ -47,7 +47,7 @@ export default function CtaBanner() {
         className="inline-block px-10 py-4 text-sm font-medium tracking-wide transition-colors duration-200"
         style={{ backgroundColor: "#0d0e10", color: "var(--gold)" }}
       >
-        Get Your Free Audit Today →
+        Get Your Free digital Audit Today →
       </motion.a>
     </section>
   );

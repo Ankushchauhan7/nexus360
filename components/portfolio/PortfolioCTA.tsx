@@ -64,7 +64,7 @@ export default function PortfolioCTA() {
             onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "var(--gold2)")}
             onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "var(--gold)")}
           >
-            Start with a Free Audit →
+            Start with a Free Digital Audit →
           </motion.a>
           <a
             href="/contact"

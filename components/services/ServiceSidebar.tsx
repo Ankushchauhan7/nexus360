@@ -141,7 +141,7 @@ export default function ServiceSidebar({
             className="font-display text-2xl tracking-wide mb-1"
             style={{ color: "#0d0e10" }}
           >
-            FREE AUDIT
+            FREE Digital AUDIT
           </div>
           <div
             className="text-[12px] font-light"
