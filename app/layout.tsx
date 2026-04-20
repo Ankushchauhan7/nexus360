@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Bebas_Neue, DM_Serif_Display, DM_Sans } from "next/font/google";
 import "./globals.css";
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const bebasNeue = Bebas_Neue({
   weight: "400",
@@ -107,6 +108,7 @@ export default function RootLayout({
       >
         {children}
         <Analytics />
+        <SpeedInsights/>
       </body>
     </html>
   );
