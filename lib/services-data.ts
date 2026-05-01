@@ -499,6 +499,96 @@ export const services: Service[] = [
       },
     ],
   },
+  {
+    slug: "gem-government-procurement",
+    num: "09",
+    icon: "🏛️",
+    title: "GeM & Government Procurement",
+    tagline: "Your digital edge in India's largest government marketplace.",
+    heroDesc:
+      "The Government e-Marketplace — GeM — is India's single largest public procurement platform, growing at over 50% year on year. Delhi-NCR MSMEs are leaving thousands of crores in government orders on the table — not because they are ineligible, but because they are not set up correctly. Nexus360 combines specialist GeM procurement knowledge with full digital marketing capability so your business gets found, looks credible, bids intelligently, and wins consistently.",
+    color: "#e8a020",
+    offerings: [
+      {
+        title: "GeM Seller Registration & Profile Setup",
+        desc: "End-to-end onboarding on the GeM portal — KYC, bank account, GST and Udyam linkage, Aadhaar verification, and digital signature setup. We get you correctly registered from day one — no gaps, no incomplete fields, nothing left for you to figure out alone.",
+      },
+      {
+        title: "Catalogue Creation & Optimisation",
+        desc: "Category-accurate product and service listings built for discoverability — correct technical specifications, high-quality images, competitive pricing strategy, Country-of-Origin declarations, and all mandatory compliance documents. We write your catalogue the way government buyers search for it.",
+      },
+      {
+        title: "OEM & Brand Documentation",
+        desc: "Trademark advisory, OEM authorisation letters, authorised reseller documentation, BIS/ISO certificates, and all brand-related compliance requirements — handled completely so your listings pass GeM's verification without delays.",
+      },
+      {
+        title: "Bid Monitoring & Go/No-Go Advisory",
+        desc: "Daily monitoring of GeM bids, Reverse Auctions, and direct purchase opportunities in your categories. Every relevant bid is screened for eligibility, margin, and win probability before a decision is made. You only pursue bids worth pursuing.",
+      },
+      {
+        title: "Bid Preparation & Submission",
+        desc: "Complete bid response preparation — technical compliance statements, commercial documents, BoQ pricing, and portal submission. For Reverse Auctions, we provide live strategy and real-time participation support.",
+      },
+      {
+        title: "EMD, PBG & Securities Management",
+        desc: "Earnest Money Deposit arrangement, MSME/Udyam exemption advisory, bank guarantee coordination, ePBG submission on the portal, and systematic tracking and refund follow-up. No EMD forfeiture. No missed deadlines.",
+      },
+      {
+        title: "Order Execution & Payment Recovery",
+        desc: "Order acceptance, dispatch documentation, invoice preparation, and systematic payment follow-up with buyer departments and accounts teams. Every rupee tracked until it arrives in your account — because winning a bid means nothing without collecting the payment.",
+      },
+      {
+        title: "GeM Catalogue Digital Marketing",
+        desc: "This is where Nexus360's digital expertise becomes your competitive advantage. We apply SEO principles to your GeM catalogue — keyword-optimised titles, search-aligned specifications, and content structured for maximum visibility within the GeM search engine and beyond.",
+      },
+      {
+        title: "Traditional Government Tender Consulting",
+        desc: "For clients ready to move beyond GeM into CPPP, state eProcurement portals, PSU procurement, and defence procurement. Covers vendor registration, pre-bid meetings, technical and commercial bid preparation, and full contract lifecycle management through to closure.",
+      },
+    ],
+    benefits: [
+      "Full-cycle coverage — registration to final payment, under one engagement",
+      "Digital-first advantage — GeM catalogue optimised for search visibility",
+      "Delhi-NCR expertise — local buyer patterns and procurement priorities understood",
+      "Nexus360 integration — GeM presence backed by SEO, content, and brand credibility",
+      "No missed bids — AI-assisted monitoring across all relevant GeM categories",
+      "MSME exemption maximised — Udyam benefits applied at every eligible stage",
+      "Transparent reporting — bid pipeline, order status, and payment tracker monthly",
+    ],
+    process: [
+      "GeM Readiness Assessment — we review your current status, product/service category, Udyam registration, certifications, and digital presence. Clear action plan delivered within three business days.",
+      "Strategy & Roadmap — a custom roadmap across GeM setup, catalogue, bid strategy, and supporting digital presence — sequenced for fastest time to first order.",
+      "GeM Setup & Catalogue Live — profile completed, catalogue built, OEM documentation handled, compliance verified. Your business is visible to government buyers across India.",
+      "First Bid Identification & Execution — we identify, screen, prepare, and submit your first bid. Reverse Auction strategy and live participation support included.",
+      "Measure, Optimise & Grow — bid pipeline, catalogue performance, vendor rating, and payment status tracked monthly. Continuous optimisation across GeM and supporting digital channels.",
+    ],
+    faqs: [
+      {
+        q: "Do we need to already be registered on GeM to use this service?",
+        a: "No. We handle registration from scratch — or clean up and complete a dormant or partial registration. Most of our clients start from zero or with an incomplete account.",
+      },
+      {
+        q: "How is Nexus360's GeM service different from a standalone tender consultant?",
+        a: "Most tender consultants stop at the procurement layer — registration, bids, documents. Nexus360 goes further: we optimise your GeM catalogue for search visibility, build the digital brand credibility that makes government buyers trust you, and integrate GeM with your wider online presence. No standalone consultant offers this.",
+      },
+      {
+        q: "Can you help if our GeM account is incomplete or was abandoned?",
+        a: "Yes — this is one of the most common situations we encounter. We audit what exists, identify what is missing or incorrectly structured, and complete the setup properly.",
+      },
+      {
+        q: "Do you cover traditional government tenders, not just GeM?",
+        a: "Yes. GeM is the recommended starting point for most MSMEs. As your experience and credentials build, we support your entry into traditional eProcurement tenders — CPPP, state portals, PSU procurement, and more.",
+      },
+      {
+        q: "What is the engagement model?",
+        a: "Ongoing retainer partnership — not a one-time service. We stay with you from first registration through to recurring government revenue, with monthly reviews, continuous bid monitoring, and catalogue management included.",
+      },
+      {
+        q: "How quickly can we expect our first GeM order?",
+        a: "For a business starting from scratch with a clear product or service category, most clients receive their first order within 8–14 weeks of engagement — depending on category competitiveness and catalogue approval timelines.",
+      },
+    ],
+  },
 ];
 
 export function getServiceBySlug(slug: string): Service | undefined {

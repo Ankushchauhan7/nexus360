@@ -13,6 +13,7 @@ const services = [
   { num:"06", icon:"📄", title:"Technical Documentation",      slug:"technical-documentation",  desc:"Clarity in complexity — turning technical knowledge into accessible content.",                items:["Product & Software Documentation","Standard Operating Procedures","Help Center & Knowledge Base","Process & Workflow Guides"] },
   { num:"07", icon:"📊", title:"Performance Marketing",        slug:"performance-marketing",    desc:"Data-driven campaigns built for measurable ROI and sustainable growth.",                      items:["Google Ads & PPC Campaigns","Conversion Rate Optimization","Marketing Funnel Automation","Analytics & GA4 Dashboards","A/B Testing"] },
   { num:"08", icon:"🤖", title:"AI-Powered Solutions",         slug:"ai-powered-solutions",     desc:"Harness the power of AI to move faster, create smarter, and rank everywhere.",               items:["AI Content Strategy & Automation","Prompt Engineering for Business","AI Search Optimization (AEO/GEO)"] },
+  { num:"09", icon:"🏛️", title:"GeM & Government Procurement", slug:"gem-government-procurement", desc:"Win government orders — GeM registration, catalogue, bid management, and contract closure.", items:["GeM Registration & Profile Setup","Catalogue Creation & Optimisation","Bid Monitoring & Go/No-Go Advisory","EMD, PBG & Securities Management","Order Execution & Payment Recovery"] },
 ];
 
 function ServiceCard({ service, index }: { service: typeof services[0]; index: number }) {

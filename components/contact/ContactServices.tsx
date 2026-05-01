@@ -13,6 +13,8 @@ const services = [
   { icon: "📄", title: "Technical Documentation",  slug: "technical-documentation" },
   { icon: "📊", title: "Performance Marketing",    slug: "performance-marketing"   },
   { icon: "🤖", title: "AI-Powered Solutions",     slug: "ai-powered-solutions"    },
+  { icon: "🏛️", title: "GeM & Govt Procurement",   slug: "gem-government-procurement" },
+  
 ];
 
 export default function ContactServices() {

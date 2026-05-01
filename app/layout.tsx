@@ -1,8 +1,8 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Bebas_Neue, DM_Serif_Display, DM_Sans } from "next/font/google";
 import "./globals.css";
 import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const bebasNeue = Bebas_Neue({
   weight: "400",
@@ -26,6 +26,15 @@ const dmSans = DM_Sans({
   display: "swap",
 });
 
+// ── Viewport — themeColor must live here in Next.js 14+ ─────────────────────
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: dark)",  color: "#0D0E10" },
+    { media: "(prefers-color-scheme: light)", color: "#0D0E10" },
+  ],
+};
+
+// ── Metadata ─────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: "Nexus360 — Total Digital Growth Partner",
   description:
@@ -38,38 +47,30 @@ export const metadata: Metadata = {
     "content marketing",
     "performance marketing",
     "AI solutions",
+    "GeM registration India",
+  "government procurement digital marketing",
   ],
   metadataBase: new URL("https://nexus360degree.com"),
 
-  // ── Favicons ────────────────────────────────────────────────────────────────
+  // ── Favicons ──────────────────────────────────────────────────────────────
   icons: {
-    // Browser tab icons (served in order — browser picks best fit)
     icon: [
-      { url: "/favicon.ico",      sizes: "48x48",  type: "image/x-icon" },
-      { url: "/favicon-16.png",   sizes: "16x16",  type: "image/png"    },
-      { url: "/favicon-32.png",   sizes: "32x32",  type: "image/png"    },
-      { url: "/favicon-48.png",   sizes: "48x48",  type: "image/png"    },
-      { url: "/favicon-96.png",   sizes: "96x96",  type: "image/png"    },
-      { url: "/favicon-192.png",  sizes: "192x192", type: "image/png"   },
-      { url: "/favicon-512.png",  sizes: "512x512", type: "image/png"   },
+      { url: "/favicon.ico",     sizes: "48x48",   type: "image/x-icon" },
+      { url: "/favicon-16.png",  sizes: "16x16",   type: "image/png"    },
+      { url: "/favicon-32.png",  sizes: "32x32",   type: "image/png"    },
+      { url: "/favicon-48.png",  sizes: "48x48",   type: "image/png"    },
+      { url: "/favicon-96.png",  sizes: "96x96",   type: "image/png"    },
+      { url: "/favicon-192.png", sizes: "192x192", type: "image/png"    },
+      { url: "/favicon-512.png", sizes: "512x512", type: "image/png"    },
     ],
-    // iPhone / iPad home screen icon
-    apple: [
-      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
-    ],
-    // Legacy fallback (IE, older browsers)
+    apple:    [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
     shortcut: "/favicon.ico",
   },
 
-  // ── Manifest & Theme ────────────────────────────────────────────────────────
+  // ── Manifest ──────────────────────────────────────────────────────────────
   manifest: "/site.webmanifest",
- themeColor: [
-  { media: "(prefers-color-scheme: dark)",  color: "#0D0E10" },
-  { media: "(prefers-color-scheme: light)", color: "#0D0E10" },
-],
 
-
-  // ── Open Graph (social sharing) ─────────────────────────────────────────────
+  // ── Open Graph ────────────────────────────────────────────────────────────
   openGraph: {
     title:       "Nexus360° — One Partner. Every Channel. Total Growth.",
     description: "Total connection across every digital touchpoint.",
@@ -83,11 +84,11 @@ export const metadata: Metadata = {
         alt:    "Nexus360° — Digital Growth Partner",
       },
     ],
-    type: "website",
+    type:   "website",
     locale: "en_IN",
   },
 
-  // ── Twitter / X Card ────────────────────────────────────────────────────────
+  // ── Twitter / X ───────────────────────────────────────────────────────────
   twitter: {
     card:        "summary_large_image",
     title:       "Nexus360° — One Partner. Every Channel. Total Growth.",
@@ -108,7 +109,7 @@ export default function RootLayout({
       >
         {children}
         <Analytics />
-        <SpeedInsights/>
+        <SpeedInsights />
       </body>
     </html>
   );

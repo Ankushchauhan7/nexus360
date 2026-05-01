@@ -7,6 +7,7 @@ const items = [
   "TECHNICAL DOCUMENTATION",
   "PERFORMANCE MARKETING",
   "AI-POWERED SOLUTIONS",
+  "GEM & GOVERNMENT PROCUREMENT",
 ];
 
 export default function Marquee() {

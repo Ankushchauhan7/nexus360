@@ -1,25 +1,24 @@
 "use client";
 
 const serviceLinks = [
-  "Web Development",
-  "SEO",
-  "Social Media Marketing",
-  "Content Marketing",
-  "Creative Design",
+  { label: "Web Development",        href: "/services/web-development"        },
+  { label: "SEO",                    href: "/services/seo"                    },
+  { label: "Social Media Marketing", href: "/services/social-media-marketing" },
+  { label: "Content Marketing",      href: "/services/content-marketing"      },
+  { label: "Creative Design",        href: "/services/creative-design"        },
 ];
 
 const moreServices = [
-  "Technical Documentation",
-  "Performance Marketing",
-  "AI-Powered Solutions",
+  { label: "Technical Documentation",      href: "/services/technical-documentation"      },
+  { label: "Performance Marketing",        href: "/services/performance-marketing"        },
+  { label: "AI-Powered Solutions",         href: "/services/ai-powered-solutions"         },
+  { label: "GeM & Government Procurement", href: "/services/gem-government-procurement"   },
 ];
 
 const companyLinks = [
-  { label: "About Nexus360", href: "/about" },
-  { label: "Our Process", href: "/#process" },
-  // { label: "Case Studies", href: "/case-studies" },
-  // { label: "Blog", href: "/blog" },
-  { label: "Contact", href: "/contact" },
+  { label: "About Nexus360", href: "/about"    },
+  { label: "Our Process",    href: "/#process" },
+  { label: "Contact",        href: "/contact"  },
 ];
 
 export default function Footer() {
@@ -32,7 +31,7 @@ export default function Footer() {
       }}
     >
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-        
+
         {/* Brand */}
         <div>
           <div className="font-display text-3xl tracking-widest mb-4">
@@ -58,19 +57,15 @@ export default function Footer() {
           </h4>
           <ul className="space-y-2.5">
             {serviceLinks.map((s) => (
-              <li key={s}>
+              <li key={s.href}>
                 <a
-                  href="/#services"
+                  href={s.href}
                   className="text-[13px] transition-colors duration-200"
                   style={{ color: "var(--muted)" }}
-                  onMouseEnter={(e) =>
-                    (e.currentTarget.style.color = "var(--text)")
-                  }
-                  onMouseLeave={(e) =>
-                    (e.currentTarget.style.color = "var(--muted)")
-                  }
+                  onMouseEnter={(e) => (e.currentTarget.style.color = "var(--text)")}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = "var(--muted)")}
                 >
-                  {s}
+                  {s.label}
                 </a>
               </li>
             ))}
@@ -87,19 +82,15 @@ export default function Footer() {
           </h4>
           <ul className="space-y-2.5">
             {moreServices.map((s) => (
-              <li key={s}>
+              <li key={s.href}>
                 <a
-                  href="/#services"
+                  href={s.href}
                   className="text-[13px] transition-colors duration-200"
                   style={{ color: "var(--muted)" }}
-                  onMouseEnter={(e) =>
-                    (e.currentTarget.style.color = "var(--text)")
-                  }
-                  onMouseLeave={(e) =>
-                    (e.currentTarget.style.color = "var(--muted)")
-                  }
+                  onMouseEnter={(e) => (e.currentTarget.style.color = "var(--text)")}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = "var(--muted)")}
                 >
-                  {s}
+                  {s.label}
                 </a>
               </li>
             ))}
@@ -121,12 +112,8 @@ export default function Footer() {
                   href={item.href}
                   className="text-[13px] transition-colors duration-200"
                   style={{ color: "var(--muted)" }}
-                  onMouseEnter={(e) =>
-                    (e.currentTarget.style.color = "var(--text)")
-                  }
-                  onMouseLeave={(e) =>
-                    (e.currentTarget.style.color = "var(--muted)")
-                  }
+                  onMouseEnter={(e) => (e.currentTarget.style.color = "var(--text)")}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = "var(--muted)")}
                 >
                   {item.label}
                 </a>
