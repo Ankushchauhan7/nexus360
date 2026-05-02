@@ -64,6 +64,7 @@ export default function Navbar() {
   // ── Nav links ──────────────────────────────────────────────────────────────
   const links = [
     { label: "Home",     href: "/",          sectionId: ""         },
+    { label: "GEM",     href: "/services/gem-government-procurement",          sectionId: ""         },
     { label: "Services", href: "/#services", sectionId: "services" },
     { label: "About",    href: "/about",     sectionId: ""         },
     { label: "Why Us",   href: "/#why",      sectionId: "why"      },
